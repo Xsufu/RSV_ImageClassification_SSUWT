@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSUWT Neural Network</title>
+
+    <style>
+        html {
+            height: -webkit-fill-available;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .background {
+            position: absolute;
+            height: max-content;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            width: max-content;
+            min-width: 100vw;
+            min-width: -webkit-fill-available;
+            background-image: url('/static/bg_losb.png');
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px);
+            z-index: -1;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            height: max-content;
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            align-content: center;
+        }
+        .header {
+            width: auto;
+            margin: 0 auto;
+        }
+        .formBox {
+            width: auto;
+            margin: 0 auto;
+            font-size: x-large;
+        }
+
+        .formBox .form {
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .formBox .form .applyButton {
+            width: auto;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="header">
+        <h1>Классификация изображений</h1>
+    </div>
+    
+    <div class="formBox">
+        <form method="POST" class="form" enctype="multipart/form-data">
+            <label for="file">Выберите архив с изображениями (.zip):</label>
+            <input type="file" name="file" id="file" accept=".zip" required>
+            <br>
+            <button style="height: 5em;" type="submit">Загрузить и классифицировать</button>
+        </form>
+    </div>
+    
+    
+    <!-- Поле для отображения результатов, если нужно -->
+    <!--
+    <div>
+        <h2>Результаты классификации:</h2>
+        <ul>
+            <li>Класс 1: результат 1</li>
+            <li>Класс 2: результат 2</li>
+            <li>Класс 3: результат 3</li>
+        </ul>
+    </div>
+    -->
+</body>
+</html>
